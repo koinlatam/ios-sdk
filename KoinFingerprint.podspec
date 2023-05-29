@@ -17,7 +17,8 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC 
-  Koin iOS SDK
+  Koin iOS SDK provides a simple API to compute a unique device fingerpint
+  to use it along with Koin Payments or Antifraud services. 
                    DESC
 
   spec.homepage     = "https://www.koin.com.br"
