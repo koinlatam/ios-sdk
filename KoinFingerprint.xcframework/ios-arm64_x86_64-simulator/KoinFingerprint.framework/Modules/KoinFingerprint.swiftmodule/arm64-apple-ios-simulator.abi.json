@@ -33,6 +33,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KoinFingerprint",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "AdSupport",
         "printedName": "AdSupport",
         "declKind": "Import",
@@ -444,6 +454,23 @@
         "kind": "Import",
         "name": "AdSupport",
         "printedName": "AdSupport",
+        "declKind": "Import",
+        "moduleName": "KoinFingerprint"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KoinFingerprint",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "LocalAuthentication",
+        "printedName": "LocalAuthentication",
         "declKind": "Import",
         "moduleName": "KoinFingerprint"
       },
@@ -1219,142 +1246,149 @@
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "IntegerLiteral",
-      "offset": 661,
+      "offset": 711,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "IntegerLiteral",
-      "offset": 699,
+      "offset": 749,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "IntegerLiteral",
-      "offset": 747,
+      "offset": 797,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "IntegerLiteral",
-      "offset": 793,
+      "offset": 843,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "Array",
-      "offset": 848,
+      "offset": 898,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "IntegerLiteral",
-      "offset": 1084,
+      "offset": 1134,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "IntegerLiteral",
-      "offset": 1387,
+      "offset": 1437,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "IntegerLiteral",
-      "offset": 1451,
+      "offset": 1501,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "IntegerLiteral",
-      "offset": 1814,
+      "offset": 1864,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "IntegerLiteral",
-      "offset": 1894,
+      "offset": 1944,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "StringLiteral",
-      "offset": 2666,
+      "offset": 2716,
       "length": 21,
       "value": "\"fingerprintExecutor\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "StringLiteral",
-      "offset": 2692,
+      "offset": 2742,
       "length": 15,
       "value": "\"executionTime\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "Array",
-      "offset": 2772,
+      "offset": 2822,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "FloatLiteral",
-      "offset": 3723,
+      "offset": 3773,
       "length": 3,
       "value": "0.9"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "BooleanLiteral",
-      "offset": 3748,
+      "offset": 3798,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "BooleanLiteral",
-      "offset": 3778,
+      "offset": 3828,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "IntegerLiteral",
-      "offset": 4038,
+      "offset": 4088,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "FloatLiteral",
-      "offset": 4179,
+      "offset": 4229,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "IntegerLiteral",
-      "offset": 4300,
+      "offset": 4350,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FingerprintHarvestersExecutor.swift",
       "kind": "FloatLiteral",
-      "offset": 4328,
+      "offset": 4378,
       "length": 3,
       "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Version.swift",
+      "kind": "StringLiteral",
+      "offset": 159,
+      "length": 7,
+      "value": "\"0.1.0\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ApplicationHarvester.swift",
@@ -1422,16 +1456,170 @@
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 404,
+      "offset": 405,
       "length": 6,
       "value": "\"name\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 458,
+      "offset": 459,
       "length": 9,
       "value": "\"version\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 519,
+      "length": 7,
+      "value": "\"build\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 607,
+      "length": 10,
+      "value": "\"bootTime\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 665,
+      "length": 10,
+      "value": "\"hostName\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 736,
+      "length": 10,
+      "value": "\"timeZone\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 802,
+      "length": 20,
+      "value": "\"preferredLanguages\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 979,
+      "length": 14,
+      "value": "\"languageCode\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 1090,
+      "length": 21,
+      "value": "\"languageCountryCode\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 1226,
+      "length": 6,
+      "value": "\"name\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 1266,
+      "length": 9,
+      "value": "\"version\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 1321,
+      "length": 8,
+      "value": "\"kernel\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 1393,
+      "length": 6,
+      "value": "\"type\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 1512,
+      "length": 6,
+      "value": "\"mode\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 1556,
+      "length": 7,
+      "value": "\"style\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 1631,
+      "length": 4,
+      "value": "\"ui\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 2553,
+      "length": 30,
+      "value": "\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2642,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 3811,
+      "length": 7,
+      "value": "\"PHONE\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 3857,
+      "length": 5,
+      "value": "\"PAD\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 3900,
+      "length": 4,
+      "value": "\"TV\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 3947,
+      "length": 10,
+      "value": "\"CAR_PLAY\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 3996,
+      "length": 5,
+      "value": "\"MAC\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/OperativeSystemHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 4047,
+      "length": 9,
+      "value": "\"UNKNOWN\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/KoinFingerprinter.swift",
@@ -1679,6 +1867,13 @@
       "value": "\"mobileApplication\""
     },
     {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/KoinFingerprinter.swift",
+      "kind": "StringLiteral",
+      "offset": 6252,
+      "length": 12,
+      "value": "\"sdkVersion\""
+    },
+    {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ScreenHarvester.swift",
       "kind": "StringLiteral",
       "offset": 217,
@@ -1709,56 +1904,63 @@
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ScreenHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 690,
+      "offset": 481,
+      "length": 7,
+      "value": "\"scale\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ScreenHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 772,
       "length": 10,
       "value": "\"portrait\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ScreenHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 749,
+      "offset": 831,
       "length": 15,
       "value": "\"landscapeLeft\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ScreenHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 814,
+      "offset": 896,
       "length": 16,
       "value": "\"landscapeRight\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ScreenHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 884,
+      "offset": 966,
       "length": 20,
       "value": "\"portraitUpsideDown\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ScreenHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 948,
+      "offset": 1030,
       "length": 10,
       "value": "\"faceDown\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ScreenHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 1000,
+      "offset": 1082,
       "length": 8,
       "value": "\"faceUp\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ScreenHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 1184,
+      "offset": 1266,
       "length": 6,
       "value": "\"SRGB\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ScreenHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 1245,
+      "offset": 1327,
       "length": 4,
       "value": "\"P3\""
     },
@@ -1794,90 +1996,97 @@
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
       "kind": "StringLiteral",
       "offset": 470,
-      "length": 5,
-      "value": "\"isp\""
-    },
-    {
-      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
-      "kind": "StringLiteral",
-      "offset": 514,
       "length": 13,
       "value": "\"networkType\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 626,
+      "offset": 572,
+      "length": 5,
+      "value": "\"isp\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 618,
+      "length": 13,
+      "value": "\"carrierName\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 738,
       "length": 9,
       "value": "\"country\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 696,
+      "offset": 808,
       "length": 7,
       "value": "\"state\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 762,
+      "offset": 874,
       "length": 8,
       "value": "\"region\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 830,
+      "offset": 942,
       "length": 6,
       "value": "\"city\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 894,
+      "offset": 1006,
       "length": 10,
       "value": "\"latitude\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 966,
+      "offset": 1078,
       "length": 11,
       "value": "\"longitude\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 1220,
+      "offset": 1332,
       "length": 15,
       "value": "\"executionTime\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 1326,
+      "offset": 1438,
       "length": 9,
       "value": "\"enabled\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
       "kind": "BooleanLiteral",
-      "offset": 1339,
+      "offset": 1451,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 1374,
+      "offset": 1486,
       "length": 8,
       "value": "\"status\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 1509,
+      "offset": 1621,
       "length": 18,
       "value": "\"locationServices\""
     },
@@ -1933,268 +2142,415 @@
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 364,
+      "offset": 355,
       "length": 6,
       "value": "\"name\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 408,
+      "offset": 394,
       "length": 7,
       "value": "\"model\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 457,
+      "offset": 443,
       "length": 9,
       "value": "\"battery\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 501,
+      "offset": 487,
       "length": 10,
       "value": "\"language\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 515,
+      "offset": 501,
       "length": 32,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 546,
+      "offset": 532,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 637,
+      "length": 6,
+      "value": "\"free\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 677,
+      "length": 6,
+      "value": "\"used\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 717,
+      "length": 7,
+      "value": "\"total\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 761,
+      "length": 11,
+      "value": "\"diskSpace\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "BooleanLiteral",
-      "offset": 729,
+      "offset": 981,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "BooleanLiteral",
-      "offset": 851,
+      "offset": 1087,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "BooleanLiteral",
-      "offset": 901,
+      "offset": 1137,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 983,
+      "offset": 1219,
       "length": 7,
       "value": "\"level\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 1122,
+      "offset": 1350,
       "length": 8,
       "value": "\"status\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 1134,
+      "offset": 1362,
       "length": 10,
       "value": "\"charging\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 1191,
+      "offset": 1419,
       "length": 8,
       "value": "\"status\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 1203,
+      "offset": 1431,
       "length": 6,
       "value": "\"full\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 1261,
+      "offset": 1489,
       "length": 8,
       "value": "\"status\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 1273,
+      "offset": 1501,
       "length": 11,
       "value": "\"unplugged\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
       "kind": "BooleanLiteral",
-      "offset": 1472,
+      "offset": 1701,
       "length": 5,
       "value": "false"
     },
     {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2047,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2583,
+      "length": 4,
+      "value": "1024"
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2590,
+      "length": 4,
+      "value": "1024"
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2662,
+      "length": 4,
+      "value": "1024"
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2669,
+      "length": 4,
+      "value": "1024"
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2741,
+      "length": 4,
+      "value": "1024"
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/DeviceHarvester.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2748,
+      "length": 4,
+      "value": "1024"
+    },
+    {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "StringLiteral",
-      "offset": 416,
+      "offset": 362,
       "length": 14,
       "value": "\"dispatchedAt\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "StringLiteral",
-      "offset": 537,
+      "offset": 506,
       "length": 10,
       "value": "\"hasError\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "BooleanLiteral",
-      "offset": 551,
+      "offset": 520,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "StringLiteral",
-      "offset": 580,
+      "offset": 549,
       "length": 7,
       "value": "\"error\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "StringLiteral",
-      "offset": 715,
+      "offset": 670,
       "length": 15,
       "value": "\"executionTime\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "StringLiteral",
-      "offset": 843,
+      "offset": 798,
       "length": 11,
       "value": "\"extraData\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 1174,
+      "offset": 1129,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "StringLiteral",
-      "offset": 1358,
+      "offset": 1313,
       "length": 6,
       "value": "\"%02x\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "StringLiteral",
-      "offset": 1947,
+      "offset": 1446,
+      "length": 30,
+      "value": "\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1531,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
+      "kind": "StringLiteral",
+      "offset": 1956,
       "length": 11,
       "value": "\"%.0fx%.0f\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "Array",
-      "offset": 2151,
+      "offset": 2160,
       "length": 7,
       "value": "[\"en0\"]"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "Array",
-      "offset": 2188,
+      "offset": 2197,
       "length": 21,
       "value": "[\"en2\", \"en3\", \"en4\"]"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "Array",
-      "offset": 2238,
+      "offset": 2247,
       "length": 44,
       "value": "[\"pdp_ip0\", \"pdp_ip1\", \"pdp_ip2\", \"pdp_ip3\"]"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 2438,
+      "offset": 2447,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 3004,
+      "offset": 3013,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 3191,
+      "offset": 3200,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "StringLiteral",
-      "offset": 3361,
+      "offset": 3370,
       "length": 10,
       "value": "\"wireless\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "StringLiteral",
-      "offset": 3481,
+      "offset": 3490,
       "length": 7,
       "value": "\"wired\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "StringLiteral",
-      "offset": 3597,
+      "offset": 3606,
       "length": 6,
       "value": "\"line\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "StringLiteral",
-      "offset": 4077,
+      "offset": 4086,
       "length": 4,
       "value": "\"2G\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "StringLiteral",
-      "offset": 4413,
+      "offset": 4422,
       "length": 4,
       "value": "\"3G\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Utils.swift",
       "kind": "StringLiteral",
-      "offset": 4478,
+      "offset": 4487,
       "length": 4,
       "value": "\"4G\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/LocalAuthsHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 254,
+      "length": 12,
+      "value": "\"localAuths\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/LocalAuthsHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 393,
+      "length": 19,
+      "value": "\"isPasscodeEnabled\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/LocalAuthsHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 482,
+      "length": 21,
+      "value": "\"isBiometricsEnabled\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/LocalAuthsHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 587,
+      "length": 14,
+      "value": "\"biometryType\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/LocalAuthsHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 961,
+      "length": 6,
+      "value": "\"NONE\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/LocalAuthsHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 1010,
+      "length": 10,
+      "value": "\"TOUCH_ID\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/LocalAuthsHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 1062,
+      "length": 9,
+      "value": "\"FACE_ID\""
+    },
+    {
+      "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/LocalAuthsHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 1117,
+      "length": 9,
+      "value": "\"UNKNOWN\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/CrossApplicationIdentifierHarvester.swift",
