@@ -6,11 +6,12 @@ KoinFingerprint is available through [CocoaPods](https://cocoapods.org/pods/Koin
 ```ruby
     pod 'KoinFingerprint'
 ```
+Lastest versions can be found [here](https://github.com/koinlatam/ios-sdk/releases)    
 Note: If you want to learn more about CocoaPods for dependency management, check out their [Using CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html) guide.
 
 ### Manually
-
-- Open the folder location of `KoinFingerprint-xcframework.zip` and unzip it.
+- Get the latest release from [here](https://github.com/koinlatam/ios-sdk/releases)
+- Open the folder location of downloaded `KoinFingerprint-xcframework.zip` and unzip it.
 - Drag the `KoinFingerprint.xcframework` into the Project Navigator of you Xcode project.
 - When prompt with the options for adding files:
   Make sure that `Copy items if needed` is checked, as well as the target you want to add the library to.
