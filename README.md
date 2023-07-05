@@ -6,7 +6,7 @@ KoinFingerprint is available through [CocoaPods](https://cocoapods.org/pods/Koin
 ```ruby
     pod 'KoinFingerprint'
 ```
-Lastest versions can be found [here](https://github.com/koinlatam/ios-sdk/releases)    
+Latest versions can be found [here](https://github.com/koinlatam/ios-sdk/releases)    
 Note: If you want to learn more about CocoaPods for dependency management, check out their [Using CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html) guide.
 
 ### Manually
