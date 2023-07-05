@@ -1388,7 +1388,7 @@
       "kind": "StringLiteral",
       "offset": 159,
       "length": 7,
-      "value": "\"0.1.0\""
+      "value": "\"0.2.0\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ApplicationHarvester.swift",
@@ -1968,13 +1968,13 @@
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/KoinIdentifierHarvester.swift",
       "kind": "StringLiteral",
       "offset": 250,
-      "length": 21,
-      "value": "\"crossApplicationUId\""
+      "length": 10,
+      "value": "\"deviceId\""
     },
     {
       "filePath": "\/Users\/nicolasgutierrez\/projects\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/KoinIdentifierHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 918,
+      "offset": 907,
       "length": 24,
       "value": "\"koin_unique_identifier\""
     },
