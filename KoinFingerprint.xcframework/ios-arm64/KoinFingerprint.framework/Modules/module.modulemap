@@ -1,7 +1,7 @@
 framework module KoinFingerprint {
   umbrella header "KoinFingerprint.h"
-
   export *
+
   module * { export * }
 }
 
