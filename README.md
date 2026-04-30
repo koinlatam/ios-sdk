@@ -1,31 +1,35 @@
 # ios-sdk
 Koin's iOS SDK for Mobile Fingerprinting
 
-### Installation (CocoaPods)
-KoinFingerprint is available through [CocoaPods](https://cocoapods.org/pods/KoinFingerprint). To install it, simply add the following line to your Podfile:
+## Installation
+
+### CocoaPods
+KoinAntifraud is available through [CocoaPods](https://cocoapods.org/pods/KoinAntifraud). To install it, simply add the following line to your Podfile:
 ```ruby
-    pod 'KoinFingerprint'
+    pod 'KoinAntifraud'
 ```
-Latest versions can be found [here](https://github.com/koinlatam/ios-sdk/releases)    
+Latest versions can be found [here](https://github.com/koinlatam/ios-sdk/releases).
 Note: If you want to learn more about CocoaPods for dependency management, check out their [Using CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html) guide.
 
 ### Manually
-- Get the latest release from [here](https://github.com/koinlatam/ios-sdk/releases)
+- Get the latest release from [here](https://github.com/koinlatam/ios-sdk/releases).
 - Open the folder location of downloaded `KoinFingerprint-xcframework.zip` and unzip it.
 - Drag the `KoinFingerprint.xcframework` into the Project Navigator of you Xcode project.
 - When prompt with the options for adding files:
   Make sure that `Copy items if needed` is checked, as well as the target you want to add the library to.
-- Check your target's "*Frameworks, Libraries, and Embedded Content*" section and make sure the library embed option is set to "*Embed & Sign*"
-  If the framework does not appear there, click the `+` button and select it from the list of available frameworks
-- Check your target's "*Build Phases*" section and make sure the library was added to the "*Link Binary With Libraries*" status is set to "*Required*"
-  If the framework does not appear there, click the `+` button and select it from the list of available frameworks
+- Check your target's "*Frameworks, Libraries, and Embedded Content*" section and make sure the library embed option is set to "*Embed & Sign*". If the framework does not appear there, click the `+` button and select it from the list of available frameworks.
+- Check your target's "*Build Phases*" section and make sure the library was added to the "*Link Binary With Libraries*" status is set to "*Required*". If the framework does not appear there, click the `+` button and select it from the list of available frameworks.
 
 ## Usage
 
-First, import the library on you AppDelegate or main file 
+First, import the library on you AppDelegate or main file:
 ```swift
 import KoinFingerprint
 ```
+
+> Note: even though the pod is `KoinAntifraud`, the underlying framework module is still `KoinFingerprint`. So `import KoinFingerprint` is correct.
+
+### Basic registration
 
 Now, initiate the beacon at the end of `didFinishLaunchingWithOptions` or `applicationDidFinishLaunching`:
 ```swift
@@ -33,9 +37,54 @@ KoinFingerprinter.register(organizationId: "YOUR_ORG_ID")
 ```
 For production environments an override of the default url is needed, [learn more here.](https://github.com/koinlatam/ios-sdk/wiki/KoinFingerprint-Methods)
 
-After your organization is registered, you can proceed with profiling the device to get the sessionId.
+### Registration with granular configuration
+
+Starting in 1.4.0, `register` accepts an optional `FraudConfig` that lets you
+enable or disable individual fields within each section of the payload.
+
+By default, `FraudConfig()` collects everything — so you only need to provide
+a config when you want to turn something off.
+
+**Recommended: configure via initializer** (concise, declarative):
+
+```swift
+let config = FraudConfig(
+    connectivity: ConnectivityConfig(wifiSsid: false, wifiBssid: false),
+    behavioral: BehavioralConfig(enabled: false)
+)
+
+KoinFingerprinter.register(
+    organizationId: "YOUR_ORG_ID",
+    url: "YOUR_PRODUCTION_URL",
+    config: config
+)
+```
+
+**Alternative: mutate properties after instantiation** (useful when flags
+come from runtime values, feature flags, etc.):
+
+```swift
+var config = FraudConfig()
+config.behavioral.enabled = false
+config.connectivity.wifiSsid = false
+config.connectivity.wifiBssid = false
+
+KoinFingerprinter.register(organizationId: "YOUR_ORG_ID", config: config)
+```
+
+Every section exposes an `enabled` flag plus one boolean per field. Fields
+disabled via `FraudConfig` are omitted from the payload; fields that cannot
+be collected due to platform limitations are sent as `null`.
+
+### Profiling
+
+After your organization is registered, you can proceed with profiling the
+device to get the `sessionId`.
+
 ```swift
 let sessionId = KoinFingerprinter.profile()
 ```
-The sessionId returned needs to be provided by the backend when using Koin's Gateway or Fraud Prevention services.
-Custom sessionId and timeout can be provided when profiling, [learn more here.](https://github.com/koinlatam/ios-sdk/wiki/KoinFingerprint-Methods)
+
+The `sessionId` returned needs to be provided by the backend when using
+Koin's Gateway or Fraud Prevention services. Custom sessionId and timeout
+can be provided when profiling, [learn more here.](https://github.com/koinlatam/ios-sdk/wiki/KoinFingerprint-Methods)
