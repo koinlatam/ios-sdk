@@ -1,6 +1,8 @@
 # ios-sdk
 Koin's iOS SDK for Mobile Fingerprinting
 
+> **Migrating from `KoinFingerprint`?** Update the pod name and version in your Podfile to `pod 'KoinAntifraud', '~> 1.4.0'`. Your existing Swift code keeps working as is.
+
 ## Installation
 
 ### CocoaPods
@@ -26,8 +28,6 @@ First, import the library on you AppDelegate or main file:
 ```swift
 import KoinFingerprint
 ```
-
-> Note: even though the pod is `KoinAntifraud`, the underlying framework module is still `KoinFingerprint`. So `import KoinFingerprint` is correct.
 
 ### Basic registration
 
