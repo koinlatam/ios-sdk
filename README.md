@@ -109,12 +109,13 @@ SDK must:
 **How to configure on the SDK.** The signal is toggleable via
 `IntegrityConfig.targetApps` (defaults to `true`), and the list of queried
 schemes via `IntegrityConfig.targetAppsSchemes`. When `targetAppsSchemes` is
-`nil`, the SDK uses its built-in curated default. To customize:
+`nil`, the SDK uses its built-in curated default of **42 schemes** validated
+on a physical device (Brazilian antifraud scope). To customize:
 
 ```swift
 var config = FraudConfig()
 config.integrity.targetApps = true
-// nil keeps the SDK's curated default list; pass an array to override:
+// nil keeps the SDK's 42 default schemes; pass an array to override:
 config.integrity.targetAppsSchemes = ["whatsapp", "instagram", "my-custom-app"]
 
 KoinFingerprinter.register(organizationId: "YOUR_ORG_ID", config: config)
