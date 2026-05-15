@@ -4,6 +4,7 @@
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
 import AdSupport
 import AppTrackingTransparency
+import CFNetwork
 import CommonCrypto
 import CoreLocation
 import CoreMotion
@@ -168,7 +169,14 @@ public struct IntegrityConfig {
   public var isDebuggerAttached: Swift.Bool
   public var suspiciousLibraries: Swift.Bool
   public var jailbreakIndicators: Swift.Bool
-  public init(enabled: Swift.Bool = true, isDebuggerAttached: Swift.Bool = true, suspiciousLibraries: Swift.Bool = true, jailbreakIndicators: Swift.Bool = true)
+  public var isVpnActive: Swift.Bool
+  public var isProxyConfigured: Swift.Bool
+  public var isHooksDetected: Swift.Bool
+  public var targetApps: Swift.Bool
+  public var targetAppsSchemes: [Swift.String]?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(enabled: Swift.Bool = true, isDebuggerAttached: Swift.Bool = true, suspiciousLibraries: Swift.Bool = true, jailbreakIndicators: Swift.Bool = true, isVpnActive: Swift.Bool = true, isProxyConfigured: Swift.Bool = true, isHooksDetected: Swift.Bool = true, targetApps: Swift.Bool = true, targetAppsSchemes: [Swift.String]? = [])
+  #endif
 }
 public struct BehavioralConfig {
   public var enabled: Swift.Bool
