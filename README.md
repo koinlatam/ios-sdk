@@ -1,7 +1,7 @@
 # ios-sdk
 Koin's iOS SDK for Mobile Fingerprinting
 
-> **Migrating from `KoinFingerprint`?** Update the pod name and version in your Podfile to `pod 'KoinAntifraud', '~> 1.4.0'`. Your existing Swift code keeps working as is.
+> **Migrating from `KoinFingerprint`?** Update the pod name and version in your Podfile to `pod 'KoinAntifraud', '~> 1.5.0'`. Your existing Swift code keeps working as is.
 
 ## Installation
 
@@ -16,15 +16,15 @@ Note: If you want to learn more about CocoaPods for dependency management, check
 ### Manually
 - Get the latest release from [here](https://github.com/koinlatam/ios-sdk/releases).
 - Open the folder location of downloaded `KoinFingerprint-xcframework.zip` and unzip it.
-- Drag the `KoinFingerprint.xcframework` into the Project Navigator of you Xcode project.
-- When prompt with the options for adding files:
+- Drag the `KoinFingerprint.xcframework` into the Project Navigator of your Xcode project.
+- When prompted with the options for adding files:
   Make sure that `Copy items if needed` is checked, as well as the target you want to add the library to.
 - Check your target's "*Frameworks, Libraries, and Embedded Content*" section and make sure the library embed option is set to "*Embed & Sign*". If the framework does not appear there, click the `+` button and select it from the list of available frameworks.
-- Check your target's "*Build Phases*" section and make sure the library was added to the "*Link Binary With Libraries*" status is set to "*Required*". If the framework does not appear there, click the `+` button and select it from the list of available frameworks.
+- Check your target's "*Build Phases*" section and make sure the library is listed under "*Link Binary With Libraries*" with its status set to "*Required*". If the framework does not appear there, click the `+` button and select it from the list of available frameworks.
 
 ## Usage
 
-First, import the library on you AppDelegate or main file:
+First, import the library in your AppDelegate or main file:
 ```swift
 import KoinFingerprint
 ```
@@ -35,7 +35,7 @@ Now, initiate the beacon at the end of `didFinishLaunchingWithOptions` or `appli
 ```swift
 KoinFingerprinter.register(organizationId: "YOUR_ORG_ID")
 ```
-For production environments an override of the default url is needed, [learn more here.](https://github.com/koinlatam/ios-sdk/wiki/KoinFingerprint-Methods)
+For production environments an override of the default URL is needed, [learn more here.](https://github.com/koinlatam/ios-sdk/wiki/KoinFingerprint-Methods)
 
 ### Registration with granular configuration
 
@@ -73,8 +73,52 @@ KoinFingerprinter.register(organizationId: "YOUR_ORG_ID", config: config)
 ```
 
 Every section exposes an `enabled` flag plus one boolean per field. Fields
-disabled via `FraudConfig` are omitted from the payload; fields that cannot
-be collected due to platform limitations are sent as `null`.
+disabled via `FraudConfig` are omitted from the payload. When a field exists only
+on another platform (e.g. Android), the iOS SDK does not emit mock keys — parity is
+documented in the product backlog / ticket, not as placeholder values in the payload.
+
+### Payload · `integrity`
+
+#### `targetApps` signal (installed-apps list)
+
+**What it is.** Optional signal at `integrity.targetApps` that reports which
+applications from a **curated list of URL schemes** respond to
+`UIApplication.shared.canOpenURL`. The signal returns the schemes that match,
+in the configured order. On the **simulator** the SDK emits `[]` — the query
+is not reliable outside a physical device. Detection is limited by design:
+Apple only allows inspecting previously declared schemes, and most Brazilian
+apps (banks, fintechs, gov) now publish only **Universal Links** — those are
+**not detectable** through `canOpenURL` and fall outside the signal's reach.
+
+The list is not a list of app names or bundle IDs — it is a list of **URL
+schemes** (e.g. `whatsapp`, `instagram`, `nu-branch`). The SDK ships with a
+curated default validated on a physical device; you can override it with
+your own list when needed.
+
+**Host-app prerequisites.** For the signal to work, the app embedding the
+SDK must:
+
+1. Declare **every desired scheme** inside `LSApplicationQueriesSchemes` in
+   the host app's `Info.plist`. Without this declaration the system silently
+   denies the query and the signal becomes noise.
+2. Respect Apple's **~50-entry limit** on `LSApplicationQueriesSchemes` —
+   that budget is shared between the SDK's schemes and the host app's own.
+3. Account for the **App Review** impact: long lists or sensitive schemes
+   may be questioned. Align curation with product/compliance.
+
+**How to configure on the SDK.** The signal is toggleable via
+`IntegrityConfig.targetApps` (defaults to `true`), and the list of queried
+schemes via `IntegrityConfig.targetAppsSchemes`. When `targetAppsSchemes` is
+`nil`, the SDK uses its built-in curated default. To customize:
+
+```swift
+var config = FraudConfig()
+config.integrity.targetApps = true
+// nil keeps the SDK's curated default list; pass an array to override:
+config.integrity.targetAppsSchemes = ["whatsapp", "instagram", "my-custom-app"]
+
+KoinFingerprinter.register(organizationId: "YOUR_ORG_ID", config: config)
+```
 
 ### Profiling
 
