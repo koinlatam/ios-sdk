@@ -12246,7 +12246,7 @@
       "kind": "StringLiteral",
       "offset": 159,
       "length": 7,
-      "value": "\"1.5.0\""
+      "value": "\"1.5.1\""
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ApplicationHarvester.swift",
