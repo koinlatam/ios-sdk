@@ -6,6 +6,16 @@
     "children": [
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KoinFingerprint",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -1162,6 +1172,13 @@
       },
       {
         "kind": "Import",
+        "name": "UserNotifications",
+        "printedName": "UserNotifications",
+        "declKind": "Import",
+        "moduleName": "KoinFingerprint"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -1273,6 +1290,13 @@
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KoinFingerprint"
+      },
+      {
+        "kind": "Import",
+        "name": "Intents",
+        "printedName": "Intents",
         "declKind": "Import",
         "moduleName": "KoinFingerprint"
       },
@@ -2503,9 +2527,94 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "accounts",
+            "printedName": "accounts",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccountsConfig",
+                "printedName": "KoinFingerprint.AccountsConfig",
+                "usr": "s:15KoinFingerprint14AccountsConfigV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15KoinFingerprint11FraudConfigV8accountsAA08AccountsD0Vvp",
+            "mangledName": "$s15KoinFingerprint11FraudConfigV8accountsAA08AccountsD0Vvp",
+            "moduleName": "KoinFingerprint",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AccountsConfig",
+                    "printedName": "KoinFingerprint.AccountsConfig",
+                    "usr": "s:15KoinFingerprint14AccountsConfigV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint11FraudConfigV8accountsAA08AccountsD0Vvg",
+                "mangledName": "$s15KoinFingerprint11FraudConfigV8accountsAA08AccountsD0Vvg",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AccountsConfig",
+                    "printedName": "KoinFingerprint.AccountsConfig",
+                    "usr": "s:15KoinFingerprint14AccountsConfigV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint11FraudConfigV8accountsAA08AccountsD0Vvs",
+                "mangledName": "$s15KoinFingerprint11FraudConfigV8accountsAA08AccountsD0Vvs",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint11FraudConfigV8accountsAA08AccountsD0VvM",
+                "mangledName": "$s15KoinFingerprint11FraudConfigV8accountsAA08AccountsD0VvM",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(operativeSystem:application:device:hardware:screen:connectivity:location:environment:localAuths:integrity:behavioral:sensors:)",
+            "printedName": "init(operativeSystem:application:device:hardware:screen:connectivity:location:environment:localAuths:integrity:behavioral:sensors:accounts:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2596,11 +2705,18 @@
                 "printedName": "KoinFingerprint.SensorsConfig",
                 "hasDefaultArg": true,
                 "usr": "s:15KoinFingerprint13SensorsConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AccountsConfig",
+                "printedName": "KoinFingerprint.AccountsConfig",
+                "hasDefaultArg": true,
+                "usr": "s:15KoinFingerprint14AccountsConfigV"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:15KoinFingerprint11FraudConfigV15operativeSystem11application6device8hardware6screen12connectivity8location11environment10localAuths9integrity10behavioral7sensorsAcA09OperativefD0V_AA011ApplicationD0VAA06DeviceD0VAA08HardwareD0VAA06ScreenD0VAA012ConnectivityD0VAA08LocationD0VAA011EnvironmentD0VAA05LocaloD0VAA09IntegrityD0VAA010BehavioralD0VAA07SensorsD0Vtcfc",
-            "mangledName": "$s15KoinFingerprint11FraudConfigV15operativeSystem11application6device8hardware6screen12connectivity8location11environment10localAuths9integrity10behavioral7sensorsAcA09OperativefD0V_AA011ApplicationD0VAA06DeviceD0VAA08HardwareD0VAA06ScreenD0VAA012ConnectivityD0VAA08LocationD0VAA011EnvironmentD0VAA05LocaloD0VAA09IntegrityD0VAA010BehavioralD0VAA07SensorsD0Vtcfc",
+            "usr": "s:15KoinFingerprint11FraudConfigV15operativeSystem11application6device8hardware6screen12connectivity8location11environment10localAuths9integrity10behavioral7sensors8accountsAcA09OperativefD0V_AA011ApplicationD0VAA06DeviceD0VAA08HardwareD0VAA06ScreenD0VAA012ConnectivityD0VAA08LocationD0VAA011EnvironmentD0VAA05LocaloD0VAA09IntegrityD0VAA010BehavioralD0VAA07SensorsD0VAA08AccountsD0Vtcfc",
+            "mangledName": "$s15KoinFingerprint11FraudConfigV15operativeSystem11application6device8hardware6screen12connectivity8location11environment10localAuths9integrity10behavioral7sensors8accountsAcA09OperativefD0V_AA011ApplicationD0VAA06DeviceD0VAA08HardwareD0VAA06ScreenD0VAA012ConnectivityD0VAA08LocationD0VAA011EnvironmentD0VAA05LocaloD0VAA09IntegrityD0VAA010BehavioralD0VAA07SensorsD0VAA08AccountsD0Vtcfc",
             "moduleName": "KoinFingerprint",
             "declAttributes": [
               "AccessControl"
@@ -2972,6 +3088,91 @@
                 "declKind": "Accessor",
                 "usr": "s:15KoinFingerprint21OperativeSystemConfigV5buildSbvM",
                 "mangledName": "$s15KoinFingerprint21OperativeSystemConfigV5buildSbvM",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fingerprint",
+            "printedName": "fingerprint",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15KoinFingerprint21OperativeSystemConfigV11fingerprintSbvp",
+            "mangledName": "$s15KoinFingerprint21OperativeSystemConfigV11fingerprintSbvp",
+            "moduleName": "KoinFingerprint",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint21OperativeSystemConfigV11fingerprintSbvg",
+                "mangledName": "$s15KoinFingerprint21OperativeSystemConfigV11fingerprintSbvg",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint21OperativeSystemConfigV11fingerprintSbvs",
+                "mangledName": "$s15KoinFingerprint21OperativeSystemConfigV11fingerprintSbvs",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint21OperativeSystemConfigV11fingerprintSbvM",
+                "mangledName": "$s15KoinFingerprint21OperativeSystemConfigV11fingerprintSbvM",
                 "moduleName": "KoinFingerprint",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -3491,7 +3692,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(enabled:name:version:build:timeZone:preferredLanguages:systemLanguageCount:languageCode:locale:kernel:)",
+            "printedName": "init(enabled:name:version:build:fingerprint:timeZone:preferredLanguages:systemLanguageCount:languageCode:locale:kernel:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3568,11 +3769,18 @@
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:15KoinFingerprint21OperativeSystemConfigV7enabled4name7version5build8timeZone18preferredLanguages19systemLanguageCount12languageCode6locale6kernelACSb_S9btcfc",
-            "mangledName": "$s15KoinFingerprint21OperativeSystemConfigV7enabled4name7version5build8timeZone18preferredLanguages19systemLanguageCount12languageCode6locale6kernelACSb_S9btcfc",
+            "usr": "s:15KoinFingerprint21OperativeSystemConfigV7enabled4name7version5build11fingerprint8timeZone18preferredLanguages19systemLanguageCount12languageCode6locale6kernelACSb_S10btcfc",
+            "mangledName": "$s15KoinFingerprint21OperativeSystemConfigV7enabled4name7version5build11fingerprint8timeZone18preferredLanguages19systemLanguageCount12languageCode6locale6kernelACSb_S10btcfc",
             "moduleName": "KoinFingerprint",
             "declAttributes": [
               "AccessControl"
@@ -4121,9 +4329,94 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "isNotificationEnabled",
+            "printedName": "isNotificationEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15KoinFingerprint17ApplicationConfigV21isNotificationEnabledSbvp",
+            "mangledName": "$s15KoinFingerprint17ApplicationConfigV21isNotificationEnabledSbvp",
+            "moduleName": "KoinFingerprint",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint17ApplicationConfigV21isNotificationEnabledSbvg",
+                "mangledName": "$s15KoinFingerprint17ApplicationConfigV21isNotificationEnabledSbvg",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint17ApplicationConfigV21isNotificationEnabledSbvs",
+                "mangledName": "$s15KoinFingerprint17ApplicationConfigV21isNotificationEnabledSbvs",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint17ApplicationConfigV21isNotificationEnabledSbvM",
+                "mangledName": "$s15KoinFingerprint17ApplicationConfigV21isNotificationEnabledSbvM",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(enabled:name:installationDate:version:namespace:advertisingId:)",
+            "printedName": "init(enabled:name:installationDate:version:namespace:advertisingId:isNotificationEnabled:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4172,11 +4465,18 @@
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:15KoinFingerprint17ApplicationConfigV7enabled4name16installationDate7version9namespace13advertisingIdACSb_S5btcfc",
-            "mangledName": "$s15KoinFingerprint17ApplicationConfigV7enabled4name16installationDate7version9namespace13advertisingIdACSb_S5btcfc",
+            "usr": "s:15KoinFingerprint17ApplicationConfigV7enabled4name16installationDate7version9namespace13advertisingId21isNotificationEnabledACSb_S6btcfc",
+            "mangledName": "$s15KoinFingerprint17ApplicationConfigV7enabled4name16installationDate7version9namespace13advertisingId21isNotificationEnabledACSb_S6btcfc",
             "moduleName": "KoinFingerprint",
             "declAttributes": [
               "AccessControl"
@@ -4556,6 +4856,91 @@
           },
           {
             "kind": "Var",
+            "name": "manufacturer",
+            "printedName": "manufacturer",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15KoinFingerprint12DeviceConfigV12manufacturerSbvp",
+            "mangledName": "$s15KoinFingerprint12DeviceConfigV12manufacturerSbvp",
+            "moduleName": "KoinFingerprint",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint12DeviceConfigV12manufacturerSbvg",
+                "mangledName": "$s15KoinFingerprint12DeviceConfigV12manufacturerSbvg",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint12DeviceConfigV12manufacturerSbvs",
+                "mangledName": "$s15KoinFingerprint12DeviceConfigV12manufacturerSbvs",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint12DeviceConfigV12manufacturerSbvM",
+                "mangledName": "$s15KoinFingerprint12DeviceConfigV12manufacturerSbvM",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "isTablet",
             "printedName": "isTablet",
             "children": [
@@ -4812,7 +5197,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(enabled:name:model:hardwareName:isTablet:battery:deviceUptime:)",
+            "printedName": "init(enabled:name:model:hardwareName:manufacturer:isTablet:battery:deviceUptime:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4868,11 +5253,18 @@
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:15KoinFingerprint12DeviceConfigV7enabled4name5model12hardwareName8isTablet7battery12deviceUptimeACSb_S6btcfc",
-            "mangledName": "$s15KoinFingerprint12DeviceConfigV7enabled4name5model12hardwareName8isTablet7battery12deviceUptimeACSb_S6btcfc",
+            "usr": "s:15KoinFingerprint12DeviceConfigV7enabled4name5model12hardwareName12manufacturer8isTablet7battery12deviceUptimeACSb_S7btcfc",
+            "mangledName": "$s15KoinFingerprint12DeviceConfigV7enabled4name5model12hardwareName12manufacturer8isTablet7battery12deviceUptimeACSb_S7btcfc",
             "moduleName": "KoinFingerprint",
             "declAttributes": [
               "AccessControl"
@@ -6577,9 +6969,95 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "screenBrightness",
+            "printedName": "screenBrightness",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15KoinFingerprint12ScreenConfigV16screenBrightnessSbvp",
+            "mangledName": "$s15KoinFingerprint12ScreenConfigV16screenBrightnessSbvp",
+            "moduleName": "KoinFingerprint",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint12ScreenConfigV16screenBrightnessSbvg",
+                "mangledName": "$s15KoinFingerprint12ScreenConfigV16screenBrightnessSbvg",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint12ScreenConfigV16screenBrightnessSbvs",
+                "mangledName": "$s15KoinFingerprint12ScreenConfigV16screenBrightnessSbvs",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint12ScreenConfigV16screenBrightnessSbvM",
+                "mangledName": "$s15KoinFingerprint12ScreenConfigV16screenBrightnessSbvM",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(enabled:resolution:orientation:gamut:scale:screenSizeInches:)",
+            "printedName": "init(enabled:resolution:orientation:gamut:scale:screenSizeInches:screenBrightness:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6628,11 +7106,18 @@
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:15KoinFingerprint12ScreenConfigV7enabled10resolution11orientation5gamut5scale16screenSizeInchesACSb_S5btcfc",
-            "mangledName": "$s15KoinFingerprint12ScreenConfigV7enabled10resolution11orientation5gamut5scale16screenSizeInchesACSb_S5btcfc",
+            "usr": "s:15KoinFingerprint12ScreenConfigV7enabled10resolution11orientation5gamut5scale16screenSizeInches0J10BrightnessACSb_S6btcfc",
+            "mangledName": "$s15KoinFingerprint12ScreenConfigV7enabled10resolution11orientation5gamut5scale16screenSizeInches0J10BrightnessACSb_S6btcfc",
             "moduleName": "KoinFingerprint",
             "declAttributes": [
               "AccessControl"
@@ -9861,6 +10346,92 @@
           },
           {
             "kind": "Var",
+            "name": "isDoNotDisturbEnabled",
+            "printedName": "isDoNotDisturbEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15KoinFingerprint15IntegrityConfigV21isDoNotDisturbEnabledSbvp",
+            "mangledName": "$s15KoinFingerprint15IntegrityConfigV21isDoNotDisturbEnabledSbvp",
+            "moduleName": "KoinFingerprint",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint15IntegrityConfigV21isDoNotDisturbEnabledSbvg",
+                "mangledName": "$s15KoinFingerprint15IntegrityConfigV21isDoNotDisturbEnabledSbvg",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint15IntegrityConfigV21isDoNotDisturbEnabledSbvs",
+                "mangledName": "$s15KoinFingerprint15IntegrityConfigV21isDoNotDisturbEnabledSbvs",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint15IntegrityConfigV21isDoNotDisturbEnabledSbvM",
+                "mangledName": "$s15KoinFingerprint15IntegrityConfigV21isDoNotDisturbEnabledSbvM",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "targetAppsSchemes",
             "printedName": "targetAppsSchemes",
             "children": [
@@ -9997,13 +10568,20 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(enabled:isDebuggerAttached:suspiciousLibraries:jailbreakIndicators:isVpnActive:isProxyConfigured:isHooksDetected:targetApps:targetAppsSchemes:)",
+            "printedName": "init(enabled:isDebuggerAttached:suspiciousLibraries:jailbreakIndicators:isVpnActive:isProxyConfigured:isHooksDetected:targetApps:isDoNotDisturbEnabled:targetAppsSchemes:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "IntegrityConfig",
                 "printedName": "KoinFingerprint.IntegrityConfig",
                 "usr": "s:15KoinFingerprint15IntegrityConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               },
               {
                 "kind": "TypeNominal",
@@ -10086,8 +10664,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:15KoinFingerprint15IntegrityConfigV7enabled18isDebuggerAttached19suspiciousLibraries19jailbreakIndicators0F9VpnActive0F15ProxyConfigured0F13HooksDetected10targetApps0sT7SchemesACSb_S7bSaySSGSgtcfc",
-            "mangledName": "$s15KoinFingerprint15IntegrityConfigV7enabled18isDebuggerAttached19suspiciousLibraries19jailbreakIndicators0F9VpnActive0F15ProxyConfigured0F13HooksDetected10targetApps0sT7SchemesACSb_S7bSaySSGSgtcfc",
+            "usr": "s:15KoinFingerprint15IntegrityConfigV7enabled18isDebuggerAttached19suspiciousLibraries19jailbreakIndicators0F9VpnActive0F15ProxyConfigured0F13HooksDetected10targetApps0F19DoNotDisturbEnabled0sT7SchemesACSb_S8bSaySSGSgtcfc",
+            "mangledName": "$s15KoinFingerprint15IntegrityConfigV7enabled18isDebuggerAttached19suspiciousLibraries19jailbreakIndicators0F9VpnActive0F15ProxyConfigured0F13HooksDetected10targetApps0F19DoNotDisturbEnabled0sT7SchemesACSb_S8bSaySSGSgtcfc",
             "moduleName": "KoinFingerprint",
             "declAttributes": [
               "AccessControl",
@@ -12158,6 +12736,242 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "AccountsConfig",
+        "printedName": "AccountsConfig",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "enabled",
+            "printedName": "enabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15KoinFingerprint14AccountsConfigV7enabledSbvp",
+            "mangledName": "$s15KoinFingerprint14AccountsConfigV7enabledSbvp",
+            "moduleName": "KoinFingerprint",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint14AccountsConfigV7enabledSbvg",
+                "mangledName": "$s15KoinFingerprint14AccountsConfigV7enabledSbvg",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint14AccountsConfigV7enabledSbvs",
+                "mangledName": "$s15KoinFingerprint14AccountsConfigV7enabledSbvs",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint14AccountsConfigV7enabledSbvM",
+                "mangledName": "$s15KoinFingerprint14AccountsConfigV7enabledSbvM",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isAppleIdPresent",
+            "printedName": "isAppleIdPresent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15KoinFingerprint14AccountsConfigV16isAppleIdPresentSbvp",
+            "mangledName": "$s15KoinFingerprint14AccountsConfigV16isAppleIdPresentSbvp",
+            "moduleName": "KoinFingerprint",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint14AccountsConfigV16isAppleIdPresentSbvg",
+                "mangledName": "$s15KoinFingerprint14AccountsConfigV16isAppleIdPresentSbvg",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint14AccountsConfigV16isAppleIdPresentSbvs",
+                "mangledName": "$s15KoinFingerprint14AccountsConfigV16isAppleIdPresentSbvs",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15KoinFingerprint14AccountsConfigV16isAppleIdPresentSbvM",
+                "mangledName": "$s15KoinFingerprint14AccountsConfigV16isAppleIdPresentSbvM",
+                "moduleName": "KoinFingerprint",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(enabled:isAppleIdPresent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccountsConfig",
+                "printedName": "KoinFingerprint.AccountsConfig",
+                "usr": "s:15KoinFingerprint14AccountsConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15KoinFingerprint14AccountsConfigV7enabled16isAppleIdPresentACSb_Sbtcfc",
+            "mangledName": "$s15KoinFingerprint14AccountsConfigV7enabled16isAppleIdPresentACSb_Sbtcfc",
+            "moduleName": "KoinFingerprint",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:15KoinFingerprint14AccountsConfigV",
+        "mangledName": "$s15KoinFingerprint14AccountsConfigV",
+        "moduleName": "KoinFingerprint",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -12192,6 +13006,13 @@
     "json_format_version": 8
   },
   "ConstValues": [
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/AccountsHarvester.swift",
+      "kind": "StringLiteral",
+      "offset": 422,
+      "length": 10,
+      "value": "\"accounts\""
+    },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/KoinFingerprinter.swift",
       "kind": "StringLiteral",
@@ -12246,14 +13067,21 @@
       "kind": "StringLiteral",
       "offset": 159,
       "length": 7,
-      "value": "\"1.5.1\""
+      "value": "\"1.6.0\""
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ApplicationHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 231,
+      "offset": 256,
       "length": 13,
       "value": "\"application\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ApplicationHarvester.swift",
+      "kind": "FloatLiteral",
+      "offset": 2081,
+      "length": 3,
+      "value": "0.3"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/ConnectivityHarvester.swift",
@@ -12293,28 +13121,28 @@
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/IntegrityHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 345,
+      "offset": 360,
       "length": 13,
       "value": "\"HTTPSEnable\""
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/IntegrityHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 388,
+      "offset": 403,
       "length": 13,
       "value": "\"SOCKSEnable\""
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/IntegrityHarvester.swift",
       "kind": "StringLiteral",
-      "offset": 506,
+      "offset": 521,
       "length": 11,
       "value": "\"integrity\""
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/IntegrityHarvester.swift",
       "kind": "Array",
-      "offset": 10516,
+      "offset": 12577,
       "length": 77,
       "value": "[\"gum-js-loop\", \"gmain\", \"gdbus\", \"pool-frida\", \"pool-spawner\"]"
     },
@@ -12379,7 +13207,7 @@
       "kind": "IntegerLiteral",
       "offset": 559,
       "length": 3,
-      "value": "500"
+      "value": "100"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Behavioral\/BehavioralCollector.swift",
@@ -12439,680 +13267,1023 @@
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 1358,
+      "length": 10,
+      "value": "\"whatsapp\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 1446,
+      "length": 11,
+      "value": "\"instagram\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 1535,
+      "length": 4,
+      "value": "\"fb\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 1623,
+      "length": 8,
+      "value": "\"tiktok\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 1709,
+      "length": 4,
+      "value": "\"tg\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 1797,
+      "length": 10,
+      "value": "\"linkedin\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 1885,
+      "length": 6,
+      "value": "\"waze\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 1969,
+      "length": 6,
+      "value": "\"nflx\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 2056,
+      "length": 9,
+      "value": "\"nordvpn\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 2143,
+      "length": 12,
+      "value": "\"uberdriver\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 2234,
+      "length": 14,
+      "value": "\"ifood.driver\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 2332,
+      "length": 11,
+      "value": "\"unidriver\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 2424,
+      "length": 6,
+      "value": "\"meli\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 2517,
+      "length": 13,
+      "value": "\"mercadopago\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 2609,
+      "length": 10,
+      "value": "\"shopeebr\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 2698,
+      "length": 11,
+      "value": "\"nu-branch\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 2796,
+      "length": 8,
+      "value": "\"picpay\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 2882,
+      "length": 12,
+      "value": "\"bancointer\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 2973,
+      "length": 8,
+      "value": "\"c6bank\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 3060,
+      "length": 14,
+      "value": "\"itauempresas\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 3154,
+      "length": 12,
+      "value": "\"itauvarejo\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 3250,
+      "length": 7,
+      "value": "\"bbapp\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 3345,
+      "length": 13,
+      "value": "\"santanderpf\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 3445,
+      "length": 24,
+      "value": "\"br.gov.caixa.caixamais\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 3552,
+      "length": 25,
+      "value": "\"com.btg.pactual.banking\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 3643,
+      "length": 20,
+      "value": "\"appxpinvestimentos\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 3739,
+      "length": 15,
+      "value": "\"bradescoapppf\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 3838,
+      "length": 17,
+      "value": "\"bradescocartoes\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 3935,
+      "length": 6,
+      "value": "\"bvpd\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 4028,
+      "length": 9,
+      "value": "\"recarga\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 4118,
+      "length": 13,
+      "value": "\"crefisamais\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 4206,
+      "length": 10,
+      "value": "\"pagaleve\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 4294,
+      "length": 13,
+      "value": "\"psmyaccount\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 4381,
+      "length": 10,
+      "value": "\"meugovbr\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 4467,
+      "length": 13,
+      "value": "\"ectpsmobile\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 4575,
+      "length": 9,
+      "value": "\"meuinss\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 4663,
+      "length": 11,
+      "value": "\"caixa.tem\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 4752,
+      "length": 5,
+      "value": "\"cdt\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 4843,
+      "length": 28,
+      "value": "\"br.gov.caixa.caixaloterias\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 4973,
+      "length": 18,
+      "value": "\"br.gov.caixa.fgm\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 5093,
+      "length": 11,
+      "value": "\"serasaapp\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "StringLiteral",
+      "offset": 5179,
+      "length": 4,
+      "value": "\"tp\""
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/Harvesters\/Defaults\/TargetAppsDefaults.swift",
+      "kind": "Dictionary",
+      "offset": 5426,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2364,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2391,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2421,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2449,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2483,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2514,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2555,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2597,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2632,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2661,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2690,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3436,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3463,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3502,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3532,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3564,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3600,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3644,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4272,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4299,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4327,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4362,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4397,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4428,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4458,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4493,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5271,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5302,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5332,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5362,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5395,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5433,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5468,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5503,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5542,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5573,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5610,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5645,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6889,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6922,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6956,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6984,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7012,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7051,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7090,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7800,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7834,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7871,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7904,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7935,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7973,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8007,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8044,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8075,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8107,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8844,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8875,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8907,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8946,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8984,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9023,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9058,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9592,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9625,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9657,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9693,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10102,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10142,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10184,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10219,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17174,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17215,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17257,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17299,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17333,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17373,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17411,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17444,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17488,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "Array",
-      "offset": 539,
-      "length": 2529,
-      "value": "[\"whatsapp\", \"instagram\", \"fb\", \"tiktok\", \"tg\", \"linkedin\", \"waze\", \"nflx\", \"nordvpn\", \"uberdriver\", \"ifood.driver\", \"unidriver\", \"meli\", \"mercadopago\", \"shopeebr\", \"nu-branch\", \"picpay\", \"bancointer\", \"c6bank\", \"itauempresas\", \"itauvarejo\", \"bbapp\", \"santanderpf\", \"br.gov.caixa.caixamais\", \"com.btg.pactual.banking\", \"appxpinvestimentos\", \"bradescoapppf\", \"bradescocartoes\", \"bvpd\", \"recarga\", \"crefisamais\", \"pagaleve\", \"psmyaccount\", \"meugovbr\", \"ectpsmobile\", \"meuinss\", \"caixa.tem\", \"cdt\", \"br.gov.caixa.caixaloterias\", \"br.gov.caixa.fgm\", \"serasaapp\", \"tp\"]"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2205,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2232,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2262,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2290,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2321,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2362,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2404,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2439,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2468,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2497,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3161,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3188,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3227,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3257,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3289,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3325,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3860,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3887,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3915,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3950,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3981,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4011,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4046,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4783,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4814,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4844,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4874,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4907,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4945,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4980,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5015,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5054,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5085,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5122,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5157,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5915,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5948,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5982,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6010,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6038,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6077,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6738,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6772,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6809,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6842,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6873,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6911,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6945,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6982,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7013,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7045,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7782,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7813,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7845,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7884,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7922,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7961,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7996,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8530,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8563,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8595,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8631,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 9040,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 9080,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 9122,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 9157,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12444,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12485,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12527,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12569,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12603,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12643,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12681,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12714,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
-      "kind": "Array",
-      "offset": 12759,
+      "offset": 17533,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 13701,
+      "offset": 18534,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 13737,
+      "offset": 18570,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 13776,
+      "offset": 18609,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 13813,
+      "offset": 18646,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 13849,
+      "offset": 18682,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 13886,
+      "offset": 18719,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 13923,
+      "offset": 18756,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 13960,
+      "offset": 18793,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 14003,
+      "offset": 18836,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 14044,
+      "offset": 18877,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 14087,
+      "offset": 18920,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 15106,
+      "offset": 19939,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 15153,
+      "offset": 19986,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 15196,
+      "offset": 20029,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 15242,
+      "offset": 20075,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 15291,
+      "offset": 20124,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 15334,
+      "offset": 20167,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 15363,
+      "offset": 20196,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 15403,
+      "offset": 20236,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 15439,
+      "offset": 20272,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 15478,
+      "offset": 20311,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 21008,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/victor\/Developer\/GitHub\/Koin\/koin-ios-sdk\/KoinFingerprint\/KoinFingerprint\/FraudConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 21047,
       "length": 4,
       "value": "true"
     },

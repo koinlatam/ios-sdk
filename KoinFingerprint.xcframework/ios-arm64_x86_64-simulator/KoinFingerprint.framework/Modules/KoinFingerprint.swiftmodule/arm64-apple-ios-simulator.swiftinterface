@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
 // swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name KoinFingerprint
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 import AdSupport
 import AppTrackingTransparency
 import CFNetwork
@@ -13,6 +13,7 @@ import CoreTelephony
 import Darwin
 import Dispatch
 import Foundation
+import Intents
 @_exported import KoinFingerprint
 import LocalAuthentication
 import MachO
@@ -22,6 +23,7 @@ import NetworkExtension
 import QuartzCore
 import Swift
 import UIKit
+import UserNotifications
 import _Concurrency
 import _CoreNFC_UIKit
 import _StringProcessing
@@ -69,20 +71,22 @@ public struct FraudConfig {
   public var integrity: KoinFingerprint.IntegrityConfig
   public var behavioral: KoinFingerprint.BehavioralConfig
   public var sensors: KoinFingerprint.SensorsConfig
-  public init(operativeSystem: KoinFingerprint.OperativeSystemConfig = OperativeSystemConfig(), application: KoinFingerprint.ApplicationConfig = ApplicationConfig(), device: KoinFingerprint.DeviceConfig = DeviceConfig(), hardware: KoinFingerprint.HardwareConfig = HardwareConfig(), screen: KoinFingerprint.ScreenConfig = ScreenConfig(), connectivity: KoinFingerprint.ConnectivityConfig = ConnectivityConfig(), location: KoinFingerprint.LocationConfig = LocationConfig(), environment: KoinFingerprint.EnvironmentConfig = EnvironmentConfig(), localAuths: KoinFingerprint.LocalAuthsConfig = LocalAuthsConfig(), integrity: KoinFingerprint.IntegrityConfig = IntegrityConfig(), behavioral: KoinFingerprint.BehavioralConfig = BehavioralConfig(), sensors: KoinFingerprint.SensorsConfig = SensorsConfig())
+  public var accounts: KoinFingerprint.AccountsConfig
+  public init(operativeSystem: KoinFingerprint.OperativeSystemConfig = OperativeSystemConfig(), application: KoinFingerprint.ApplicationConfig = ApplicationConfig(), device: KoinFingerprint.DeviceConfig = DeviceConfig(), hardware: KoinFingerprint.HardwareConfig = HardwareConfig(), screen: KoinFingerprint.ScreenConfig = ScreenConfig(), connectivity: KoinFingerprint.ConnectivityConfig = ConnectivityConfig(), location: KoinFingerprint.LocationConfig = LocationConfig(), environment: KoinFingerprint.EnvironmentConfig = EnvironmentConfig(), localAuths: KoinFingerprint.LocalAuthsConfig = LocalAuthsConfig(), integrity: KoinFingerprint.IntegrityConfig = IntegrityConfig(), behavioral: KoinFingerprint.BehavioralConfig = BehavioralConfig(), sensors: KoinFingerprint.SensorsConfig = SensorsConfig(), accounts: KoinFingerprint.AccountsConfig = AccountsConfig())
 }
 public struct OperativeSystemConfig {
   public var enabled: Swift.Bool
   public var name: Swift.Bool
   public var version: Swift.Bool
   public var build: Swift.Bool
+  public var fingerprint: Swift.Bool
   public var timeZone: Swift.Bool
   public var preferredLanguages: Swift.Bool
   public var systemLanguageCount: Swift.Bool
   public var languageCode: Swift.Bool
   public var locale: Swift.Bool
   public var kernel: Swift.Bool
-  public init(enabled: Swift.Bool = true, name: Swift.Bool = true, version: Swift.Bool = true, build: Swift.Bool = true, timeZone: Swift.Bool = true, preferredLanguages: Swift.Bool = true, systemLanguageCount: Swift.Bool = true, languageCode: Swift.Bool = true, locale: Swift.Bool = true, kernel: Swift.Bool = true)
+  public init(enabled: Swift.Bool = true, name: Swift.Bool = true, version: Swift.Bool = true, build: Swift.Bool = true, fingerprint: Swift.Bool = true, timeZone: Swift.Bool = true, preferredLanguages: Swift.Bool = true, systemLanguageCount: Swift.Bool = true, languageCode: Swift.Bool = true, locale: Swift.Bool = true, kernel: Swift.Bool = true)
 }
 public struct ApplicationConfig {
   public var enabled: Swift.Bool
@@ -91,17 +95,19 @@ public struct ApplicationConfig {
   public var version: Swift.Bool
   public var namespace: Swift.Bool
   public var advertisingId: Swift.Bool
-  public init(enabled: Swift.Bool = true, name: Swift.Bool = true, installationDate: Swift.Bool = true, version: Swift.Bool = true, namespace: Swift.Bool = true, advertisingId: Swift.Bool = true)
+  public var isNotificationEnabled: Swift.Bool
+  public init(enabled: Swift.Bool = true, name: Swift.Bool = true, installationDate: Swift.Bool = true, version: Swift.Bool = true, namespace: Swift.Bool = true, advertisingId: Swift.Bool = true, isNotificationEnabled: Swift.Bool = true)
 }
 public struct DeviceConfig {
   public var enabled: Swift.Bool
   public var name: Swift.Bool
   public var model: Swift.Bool
   public var hardwareName: Swift.Bool
+  public var manufacturer: Swift.Bool
   public var isTablet: Swift.Bool
   public var battery: Swift.Bool
   public var deviceUptime: Swift.Bool
-  public init(enabled: Swift.Bool = true, name: Swift.Bool = true, model: Swift.Bool = true, hardwareName: Swift.Bool = true, isTablet: Swift.Bool = true, battery: Swift.Bool = true, deviceUptime: Swift.Bool = true)
+  public init(enabled: Swift.Bool = true, name: Swift.Bool = true, model: Swift.Bool = true, hardwareName: Swift.Bool = true, manufacturer: Swift.Bool = true, isTablet: Swift.Bool = true, battery: Swift.Bool = true, deviceUptime: Swift.Bool = true)
 }
 public struct HardwareConfig {
   public var enabled: Swift.Bool
@@ -125,7 +131,8 @@ public struct ScreenConfig {
   public var gamut: Swift.Bool
   public var scale: Swift.Bool
   public var screenSizeInches: Swift.Bool
-  public init(enabled: Swift.Bool = true, resolution: Swift.Bool = true, orientation: Swift.Bool = true, gamut: Swift.Bool = true, scale: Swift.Bool = true, screenSizeInches: Swift.Bool = true)
+  public var screenBrightness: Swift.Bool
+  public init(enabled: Swift.Bool = true, resolution: Swift.Bool = true, orientation: Swift.Bool = true, gamut: Swift.Bool = true, scale: Swift.Bool = true, screenSizeInches: Swift.Bool = true, screenBrightness: Swift.Bool = true)
 }
 public struct ConnectivityConfig {
   public var enabled: Swift.Bool
@@ -173,9 +180,10 @@ public struct IntegrityConfig {
   public var isProxyConfigured: Swift.Bool
   public var isHooksDetected: Swift.Bool
   public var targetApps: Swift.Bool
+  public var isDoNotDisturbEnabled: Swift.Bool
   public var targetAppsSchemes: [Swift.String]?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(enabled: Swift.Bool = true, isDebuggerAttached: Swift.Bool = true, suspiciousLibraries: Swift.Bool = true, jailbreakIndicators: Swift.Bool = true, isVpnActive: Swift.Bool = true, isProxyConfigured: Swift.Bool = true, isHooksDetected: Swift.Bool = true, targetApps: Swift.Bool = true, targetAppsSchemes: [Swift.String]? = [])
+  public init(enabled: Swift.Bool = true, isDebuggerAttached: Swift.Bool = true, suspiciousLibraries: Swift.Bool = true, jailbreakIndicators: Swift.Bool = true, isVpnActive: Swift.Bool = true, isProxyConfigured: Swift.Bool = true, isHooksDetected: Swift.Bool = true, targetApps: Swift.Bool = true, isDoNotDisturbEnabled: Swift.Bool = true, targetAppsSchemes: [Swift.String]? = [])
   #endif
 }
 public struct BehavioralConfig {
@@ -204,6 +212,11 @@ public struct SensorsConfig {
   public var gyroscopeData: Swift.Bool
   public var magnetometerData: Swift.Bool
   public init(enabled: Swift.Bool = true, isAccelerometerAvailable: Swift.Bool = true, isGyroscopeAvailable: Swift.Bool = true, isMagnetometerAvailable: Swift.Bool = true, isProximitySensorAvailable: Swift.Bool = true, isBarometerAvailable: Swift.Bool = true, hasNfc: Swift.Bool = true, accelerometerData: Swift.Bool = true, gyroscopeData: Swift.Bool = true, magnetometerData: Swift.Bool = true)
+}
+public struct AccountsConfig {
+  public var enabled: Swift.Bool
+  public var isAppleIdPresent: Swift.Bool
+  public init(enabled: Swift.Bool = true, isAppleIdPresent: Swift.Bool = true)
 }
 extension KoinFingerprint.CriticalityLevel : Swift.Equatable {}
 extension KoinFingerprint.CriticalityLevel : Swift.Hashable {}

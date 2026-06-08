@@ -121,6 +121,44 @@ config.integrity.targetAppsSchemes = ["whatsapp", "instagram", "my-custom-app"]
 KoinFingerprinter.register(organizationId: "YOUR_ORG_ID", config: config)
 ```
 
+#### `isDoNotDisturbEnabled` signal (Focus Status)
+
+**What it is.** Optional signal at `integrity.isDoNotDisturbEnabled` that
+reports whether the user has a Focus mode (Do Not Disturb, Work, Sleep,
+etc.) active. Type: `Bool | null`. Read via Apple's `INFocusStatusCenter`
+(iOS 15+).
+
+**Host-app prerequisites.** Apple restricts this API to **communication
+apps**. Without the full setup below the signal is permanently `null` or
+`false` — by design, not a bug. To receive real values the host must:
+
+1. Enable **Communication Notifications** capability on its App ID
+2. Register a separate App ID for an Intent Extension (`<host-bundle-id>.FocusStatusIntent`) with the same capability
+3. Add an **Intent Extension** target in Xcode declaring `INSendMessageIntent` / `INStartCallIntent`
+4. Add `NSFocusStatusUsageDescription` to the host's `Info.plist`
+5. Add `com.apple.developer.usernotifications.communication` to the host's `.entitlements`
+6. Call `INFocusStatusCenter.default.requestAuthorization` from the host code
+
+See the [host integration guide](docs/host-integration-isDoNotDisturbEnabled.md)
+for the full step-by-step.
+
+> **App Review risk.** The Communication Notifications capability is intended
+> for messaging and calling apps. Non-communication hosts (delivery, banking,
+> e-commerce) should align with their compliance team before submission.
+> Apple has been hardening this API in recent iOS versions — treat the signal
+> as best-effort.
+
+**How to configure on the SDK.** The signal is toggleable via
+`IntegrityConfig.isDoNotDisturbEnabled` (defaults to `true`). When `false`,
+the key is omitted from the payload. The SDK never calls
+`requestAuthorization` on its own — that responsibility lives on the host.
+
+```swift
+var config = FraudConfig()
+config.integrity.isDoNotDisturbEnabled = true  // default
+KoinFingerprinter.register(organizationId: "YOUR_ORG_ID", config: config)
+```
+
 ### Profiling
 
 After your organization is registered, you can proceed with profiling the
