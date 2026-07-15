@@ -1,17 +1,19 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
-// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name KoinFingerprint
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name KoinFingerprint
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
 import AdSupport
 import AppTrackingTransparency
 import CFNetwork
 import CommonCrypto
+import Contacts
 import CoreLocation
 import CoreMotion
 import CoreNFC
 import CoreTelephony
 import Darwin
 import Dispatch
+import EventKit
 import Foundation
 import Intents
 @_exported import KoinFingerprint
@@ -20,10 +22,12 @@ import MachO
 import MetalKit
 import Network
 import NetworkExtension
+import Photos
 import QuartzCore
 import Swift
 import UIKit
 import UserNotifications
+import WebKit
 import _Concurrency
 import _CoreNFC_UIKit
 import _StringProcessing
@@ -32,6 +36,8 @@ import _SwiftConcurrencyShims
   public static let DEFAULT_URL: Swift.String
   public static let MIN_TIMEOUT: Swift.Double
   public static func register(organizationId: Swift.String, url: Swift.String = DEFAULT_URL, config: KoinFingerprint.FraudConfig = FraudConfig())
+  @discardableResult
+  public static func shouldAllowExtensionPoint(_ identifier: UIKit.UIApplication.ExtensionPointIdentifier) -> Swift.Bool
   public static func profile(sessionId: Swift.String, timeoutInSeconds timeout: Swift.Double = MIN_TIMEOUT)
   public static func profile(timeoutInSeconds timeout: Swift.Double = MIN_TIMEOUT) -> Swift.String
   @objc deinit
@@ -72,7 +78,10 @@ public struct FraudConfig {
   public var behavioral: KoinFingerprint.BehavioralConfig
   public var sensors: KoinFingerprint.SensorsConfig
   public var accounts: KoinFingerprint.AccountsConfig
-  public init(operativeSystem: KoinFingerprint.OperativeSystemConfig = OperativeSystemConfig(), application: KoinFingerprint.ApplicationConfig = ApplicationConfig(), device: KoinFingerprint.DeviceConfig = DeviceConfig(), hardware: KoinFingerprint.HardwareConfig = HardwareConfig(), screen: KoinFingerprint.ScreenConfig = ScreenConfig(), connectivity: KoinFingerprint.ConnectivityConfig = ConnectivityConfig(), location: KoinFingerprint.LocationConfig = LocationConfig(), environment: KoinFingerprint.EnvironmentConfig = EnvironmentConfig(), localAuths: KoinFingerprint.LocalAuthsConfig = LocalAuthsConfig(), integrity: KoinFingerprint.IntegrityConfig = IntegrityConfig(), behavioral: KoinFingerprint.BehavioralConfig = BehavioralConfig(), sensors: KoinFingerprint.SensorsConfig = SensorsConfig(), accounts: KoinFingerprint.AccountsConfig = AccountsConfig())
+  public var contacts: KoinFingerprint.ContactsConfig
+  public var calendar: KoinFingerprint.CalendarConfig
+  public var media: KoinFingerprint.MediaConfig
+  public init(operativeSystem: KoinFingerprint.OperativeSystemConfig = OperativeSystemConfig(), application: KoinFingerprint.ApplicationConfig = ApplicationConfig(), device: KoinFingerprint.DeviceConfig = DeviceConfig(), hardware: KoinFingerprint.HardwareConfig = HardwareConfig(), screen: KoinFingerprint.ScreenConfig = ScreenConfig(), connectivity: KoinFingerprint.ConnectivityConfig = ConnectivityConfig(), location: KoinFingerprint.LocationConfig = LocationConfig(), environment: KoinFingerprint.EnvironmentConfig = EnvironmentConfig(), localAuths: KoinFingerprint.LocalAuthsConfig = LocalAuthsConfig(), integrity: KoinFingerprint.IntegrityConfig = IntegrityConfig(), behavioral: KoinFingerprint.BehavioralConfig = BehavioralConfig(), sensors: KoinFingerprint.SensorsConfig = SensorsConfig(), accounts: KoinFingerprint.AccountsConfig = AccountsConfig(), contacts: KoinFingerprint.ContactsConfig = ContactsConfig(), calendar: KoinFingerprint.CalendarConfig = CalendarConfig(), media: KoinFingerprint.MediaConfig = MediaConfig())
 }
 public struct OperativeSystemConfig {
   public var enabled: Swift.Bool
@@ -107,7 +116,9 @@ public struct DeviceConfig {
   public var isTablet: Swift.Bool
   public var battery: Swift.Bool
   public var deviceUptime: Swift.Bool
-  public init(enabled: Swift.Bool = true, name: Swift.Bool = true, model: Swift.Bool = true, hardwareName: Swift.Bool = true, manufacturer: Swift.Bool = true, isTablet: Swift.Bool = true, battery: Swift.Bool = true, deviceUptime: Swift.Bool = true)
+  public var installedFontsCount: Swift.Bool
+  public var webViewUserAgent: Swift.Bool
+  public init(enabled: Swift.Bool = true, name: Swift.Bool = true, model: Swift.Bool = true, hardwareName: Swift.Bool = true, manufacturer: Swift.Bool = true, isTablet: Swift.Bool = true, battery: Swift.Bool = true, deviceUptime: Swift.Bool = true, installedFontsCount: Swift.Bool = true, webViewUserAgent: Swift.Bool = true)
 }
 public struct HardwareConfig {
   public var enabled: Swift.Bool
@@ -116,13 +127,14 @@ public struct HardwareConfig {
   public var gpuName: Swift.Bool
   public var registryID: Swift.Bool
   public var cpuArchitecture: Swift.Bool
+  public var boardName: Swift.Bool
   public var gpsAvailable: Swift.Bool
   public var totalStorage: Swift.Bool
   public var availableStorage: Swift.Bool
   public var totalRam: Swift.Bool
   public var memoryPressure: Swift.Bool
   public var availableRam: Swift.Bool
-  public init(enabled: Swift.Bool = true, cpuCores: Swift.Bool = true, sensors: Swift.Bool = true, gpuName: Swift.Bool = true, registryID: Swift.Bool = true, cpuArchitecture: Swift.Bool = true, gpsAvailable: Swift.Bool = true, totalStorage: Swift.Bool = true, availableStorage: Swift.Bool = true, totalRam: Swift.Bool = true, memoryPressure: Swift.Bool = true, availableRam: Swift.Bool = true)
+  public init(enabled: Swift.Bool = true, cpuCores: Swift.Bool = true, sensors: Swift.Bool = true, gpuName: Swift.Bool = true, registryID: Swift.Bool = true, cpuArchitecture: Swift.Bool = true, boardName: Swift.Bool = true, gpsAvailable: Swift.Bool = true, totalStorage: Swift.Bool = true, availableStorage: Swift.Bool = true, totalRam: Swift.Bool = true, memoryPressure: Swift.Bool = true, availableRam: Swift.Bool = true)
 }
 public struct ScreenConfig {
   public var enabled: Swift.Bool
@@ -155,7 +167,11 @@ public struct LocationConfig {
   public var locationSpoofed: Swift.Bool
   public var locationProvider: Swift.Bool
   public var isGpsEnabled: Swift.Bool
-  public init(enabled: Swift.Bool = true, latitude: Swift.Bool = true, longitude: Swift.Bool = true, locationAccuracy: Swift.Bool = true, locationSpoofed: Swift.Bool = true, locationProvider: Swift.Bool = true, isGpsEnabled: Swift.Bool = true)
+  public var locationVisitsLast7Days: Swift.Bool
+  public var frequentLocationsCount: Swift.Bool
+  public var avgDailyMovementKm: Swift.Bool
+  public var isLocationPermissionsAlways: Swift.Bool
+  public init(enabled: Swift.Bool = true, latitude: Swift.Bool = true, longitude: Swift.Bool = true, locationAccuracy: Swift.Bool = true, locationSpoofed: Swift.Bool = true, locationProvider: Swift.Bool = true, isGpsEnabled: Swift.Bool = true, locationVisitsLast7Days: Swift.Bool = true, frequentLocationsCount: Swift.Bool = true, avgDailyMovementKm: Swift.Bool = true, isLocationPermissionsAlways: Swift.Bool = true)
 }
 public struct EnvironmentConfig {
   public var enabled: Swift.Bool
@@ -181,10 +197,10 @@ public struct IntegrityConfig {
   public var isHooksDetected: Swift.Bool
   public var targetApps: Swift.Bool
   public var isDoNotDisturbEnabled: Swift.Bool
+  public var thirdPartyKeyboardDetected: Swift.Bool
+  public var binaryIntegrity: Swift.Bool
   public var targetAppsSchemes: [Swift.String]?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(enabled: Swift.Bool = true, isDebuggerAttached: Swift.Bool = true, suspiciousLibraries: Swift.Bool = true, jailbreakIndicators: Swift.Bool = true, isVpnActive: Swift.Bool = true, isProxyConfigured: Swift.Bool = true, isHooksDetected: Swift.Bool = true, targetApps: Swift.Bool = true, isDoNotDisturbEnabled: Swift.Bool = true, targetAppsSchemes: [Swift.String]? = [])
-  #endif
+  public init(enabled: Swift.Bool = true, isDebuggerAttached: Swift.Bool = true, suspiciousLibraries: Swift.Bool = true, jailbreakIndicators: Swift.Bool = true, isVpnActive: Swift.Bool = true, isProxyConfigured: Swift.Bool = true, isHooksDetected: Swift.Bool = true, targetApps: Swift.Bool = true, isDoNotDisturbEnabled: Swift.Bool = true, thirdPartyKeyboardDetected: Swift.Bool = true, binaryIntegrity: Swift.Bool = true, targetAppsSchemes: [Swift.String]? = [])
 }
 public struct BehavioralConfig {
   public var enabled: Swift.Bool
@@ -198,7 +214,9 @@ public struct BehavioralConfig {
   public var interactionIntervals: Swift.Bool
   public var avgSessionDuration: Swift.Bool
   public var appBackgroundedCount: Swift.Bool
-  public init(enabled: Swift.Bool = true, touchPatterns: Swift.Bool = true, avgTouchDuration: Swift.Bool = true, scrollPatterns: Swift.Bool = true, swipePatterns: Swift.Bool = true, pinchZoomUsage: Swift.Bool = true, doubleTapCount: Swift.Bool = true, longPressCount: Swift.Bool = true, interactionIntervals: Swift.Bool = true, avgSessionDuration: Swift.Bool = true, appBackgroundedCount: Swift.Bool = true)
+  public var typingCadence: Swift.Bool
+  public var typingSpeed: Swift.Bool
+  public init(enabled: Swift.Bool = true, touchPatterns: Swift.Bool = true, avgTouchDuration: Swift.Bool = true, scrollPatterns: Swift.Bool = true, swipePatterns: Swift.Bool = true, pinchZoomUsage: Swift.Bool = true, doubleTapCount: Swift.Bool = true, longPressCount: Swift.Bool = true, interactionIntervals: Swift.Bool = true, avgSessionDuration: Swift.Bool = true, appBackgroundedCount: Swift.Bool = true, typingCadence: Swift.Bool = true, typingSpeed: Swift.Bool = true)
 }
 public struct SensorsConfig {
   public var enabled: Swift.Bool
@@ -211,12 +229,38 @@ public struct SensorsConfig {
   public var accelerometerData: Swift.Bool
   public var gyroscopeData: Swift.Bool
   public var magnetometerData: Swift.Bool
-  public init(enabled: Swift.Bool = true, isAccelerometerAvailable: Swift.Bool = true, isGyroscopeAvailable: Swift.Bool = true, isMagnetometerAvailable: Swift.Bool = true, isProximitySensorAvailable: Swift.Bool = true, isBarometerAvailable: Swift.Bool = true, hasNfc: Swift.Bool = true, accelerometerData: Swift.Bool = true, gyroscopeData: Swift.Bool = true, magnetometerData: Swift.Bool = true)
+  public var isDeviceHeldNaturally: Swift.Bool
+  public var physicalActivityType: Swift.Bool
+  public var barometricPressure: Swift.Bool
+  public init(enabled: Swift.Bool = true, isAccelerometerAvailable: Swift.Bool = true, isGyroscopeAvailable: Swift.Bool = true, isMagnetometerAvailable: Swift.Bool = true, isProximitySensorAvailable: Swift.Bool = true, isBarometerAvailable: Swift.Bool = true, hasNfc: Swift.Bool = true, accelerometerData: Swift.Bool = true, gyroscopeData: Swift.Bool = true, magnetometerData: Swift.Bool = true, isDeviceHeldNaturally: Swift.Bool = true, physicalActivityType: Swift.Bool = true, barometricPressure: Swift.Bool = true)
 }
 public struct AccountsConfig {
   public var enabled: Swift.Bool
   public var isAppleIdPresent: Swift.Bool
   public init(enabled: Swift.Bool = true, isAppleIdPresent: Swift.Bool = true)
+}
+public struct ContactsConfig {
+  public var enabled: Swift.Bool
+  public var contactsCount: Swift.Bool
+  public var contactsWithEmail: Swift.Bool
+  public var contactsWithPhoto: Swift.Bool
+  public init(enabled: Swift.Bool = true, contactsCount: Swift.Bool = true, contactsWithEmail: Swift.Bool = true, contactsWithPhoto: Swift.Bool = true)
+}
+public struct CalendarConfig {
+  public var enabled: Swift.Bool
+  public var eventsCount: Swift.Bool
+  public var eventsNext30Days: Swift.Bool
+  public var eventsWithLocation: Swift.Bool
+  public var eventsRemindersCount: Swift.Bool
+  public init(enabled: Swift.Bool = true, eventsCount: Swift.Bool = true, eventsNext30Days: Swift.Bool = true, eventsWithLocation: Swift.Bool = true, eventsRemindersCount: Swift.Bool = true)
+}
+public struct MediaConfig {
+  public var enabled: Swift.Bool
+  public var photosCount: Swift.Bool
+  public var photosLast30Days: Swift.Bool
+  public var screenshotsCount: Swift.Bool
+  public var videosCount: Swift.Bool
+  public init(enabled: Swift.Bool = true, photosCount: Swift.Bool = true, photosLast30Days: Swift.Bool = true, screenshotsCount: Swift.Bool = true, videosCount: Swift.Bool = true)
 }
 extension KoinFingerprint.CriticalityLevel : Swift.Equatable {}
 extension KoinFingerprint.CriticalityLevel : Swift.Hashable {}
