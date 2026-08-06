@@ -37,6 +37,27 @@ KoinFingerprinter.register(organizationId: "YOUR_ORG_ID")
 ```
 For production environments an override of the default URL is needed, [learn more here.](https://github.com/koinlatam/ios-sdk/wiki/KoinFingerprint-Methods)
 
+### .NET MAUI / ObjC interop facade
+
+Available since 1.8.0. When integrating from C# (.NET MAUI Slim Binding / Native
+Library Interop), prefer the ObjC-compatible `KoinFingerprintBridge` over calling
+`KoinFingerprinter` directly — it exposes explicit overloads (no Swift default
+parameters) and Foundation-friendly types:
+
+```objc
+[KoinFingerprintBridge registerWithOrganizationId:@"YOUR_ORG_ID"
+                                              url:KoinFingerprintBridge.defaultURL
+                               geoLocationEnabled:YES
+                                          timeout:5.0
+                                            error:&error];
+NSString *sessionId = [KoinFingerprintBridge profile];
+```
+
+`register` fails with an error when `organizationId` or `url` is blank, and clamps
+`timeout` to `KoinFingerprintBridge.minTimeout`. `profile` returns the session id
+immediately — collection and upload continue asynchronously, with no completion
+callback.
+
 ### Registration with granular configuration
 
 Starting in 1.4.0, `register` accepts an optional `FraudConfig` that lets you
