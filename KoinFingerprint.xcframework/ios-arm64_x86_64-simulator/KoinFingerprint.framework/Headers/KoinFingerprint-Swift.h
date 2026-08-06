@@ -346,6 +346,7 @@ extern "C" {
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import ObjectiveC;
 #endif
 
 #endif // defined(__OBJC__)
@@ -367,6 +368,53 @@ extern "C" {
 #endif
 
 #if defined(__OBJC__)
+
+@class NSString;
+/// Stable, bindable facade for .NET MAUI Slim Binding / Native Library Interop.
+/// Prefer this surface over <code>KoinFingerprinter</code> when integrating from C#.
+/// It exposes explicit overloads (no Swift default parameters) and Foundation-friendly types.
+/// <h2>Contract</h2>
+/// <ul>
+///   <li>
+///     Call <code>register(organizationId:url:geoLocationEnabled:timeout:)</code> before <code>profile()</code>.
+///   </li>
+///   <li>
+///     <code>profile()</code> is fire-and-forget for network send: the returned session id is available
+///     immediately; collection/upload continues asynchronously. There is no completion callback.
+///   </li>
+///   <li>
+///     The SDK never requests iOS permissions; the host app must request them. Missing
+///     permissions degrade silently (fields omitted / null).
+///   </li>
+/// </ul>
+/// Internal harvesters and services are intentionally not part of this contract.
+SWIFT_CLASS_NAMED("KoinFingerprintBridge")
+@interface KoinFingerprintBridge : NSObject
+/// Default fingerprint endpoint. Pass explicitly from MAUI (no Swift defaults).
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull defaultURL;)
++ (NSString * _Nonnull)defaultURL SWIFT_WARN_UNUSED_RESULT;
+/// Minimum allowed timeout (seconds). Values below this are clamped by the SDK.
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) double minTimeout;)
++ (double)minTimeout SWIFT_WARN_UNUSED_RESULT;
+/// Registers the SDK with required parameters.
+/// \param organizationId non-blank organization identifier
+///
+/// \param url non-blank endpoint URL (use <code>defaultURL</code> if unsure)
+///
+/// \param geoLocationEnabled master switch for geo collection (<code>location.enabled</code>)
+///
+/// \param timeout harvest timeout in seconds (clamped to >= <code>minTimeout</code>); stored for subsequent <code>profile()</code>
+///
++ (BOOL)registerWithOrganizationId:(NSString * _Nonnull)organizationId url:(NSString * _Nonnull)url geoLocationEnabled:(BOOL)geoLocationEnabled timeout:(double)timeout error:(NSError * _Nullable * _Nullable)error;
+/// Starts async collection/send and returns an existing or newly created session id.
+/// Fire-and-forget: network completion is not signaled to the caller.
+/// Uses the timeout previously stored by <code>register(organizationId:url:geoLocationEnabled:timeout:)</code>.
++ (NSString * _Nonnull)profile SWIFT_WARN_UNUSED_RESULT;
+/// Persists <code>sessionId</code> and starts async collection/send.
+/// Fire-and-forget: network completion is not signaled to the caller.
++ (BOOL)profileWithSessionId:(NSString * _Nonnull)sessionId error:(NSError * _Nullable * _Nullable)error;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #endif // defined(__OBJC__)
 #if __has_attribute(external_source_symbol)
@@ -724,6 +772,7 @@ extern "C" {
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import ObjectiveC;
 #endif
 
 #endif // defined(__OBJC__)
@@ -745,6 +794,53 @@ extern "C" {
 #endif
 
 #if defined(__OBJC__)
+
+@class NSString;
+/// Stable, bindable facade for .NET MAUI Slim Binding / Native Library Interop.
+/// Prefer this surface over <code>KoinFingerprinter</code> when integrating from C#.
+/// It exposes explicit overloads (no Swift default parameters) and Foundation-friendly types.
+/// <h2>Contract</h2>
+/// <ul>
+///   <li>
+///     Call <code>register(organizationId:url:geoLocationEnabled:timeout:)</code> before <code>profile()</code>.
+///   </li>
+///   <li>
+///     <code>profile()</code> is fire-and-forget for network send: the returned session id is available
+///     immediately; collection/upload continues asynchronously. There is no completion callback.
+///   </li>
+///   <li>
+///     The SDK never requests iOS permissions; the host app must request them. Missing
+///     permissions degrade silently (fields omitted / null).
+///   </li>
+/// </ul>
+/// Internal harvesters and services are intentionally not part of this contract.
+SWIFT_CLASS_NAMED("KoinFingerprintBridge")
+@interface KoinFingerprintBridge : NSObject
+/// Default fingerprint endpoint. Pass explicitly from MAUI (no Swift defaults).
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull defaultURL;)
++ (NSString * _Nonnull)defaultURL SWIFT_WARN_UNUSED_RESULT;
+/// Minimum allowed timeout (seconds). Values below this are clamped by the SDK.
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) double minTimeout;)
++ (double)minTimeout SWIFT_WARN_UNUSED_RESULT;
+/// Registers the SDK with required parameters.
+/// \param organizationId non-blank organization identifier
+///
+/// \param url non-blank endpoint URL (use <code>defaultURL</code> if unsure)
+///
+/// \param geoLocationEnabled master switch for geo collection (<code>location.enabled</code>)
+///
+/// \param timeout harvest timeout in seconds (clamped to >= <code>minTimeout</code>); stored for subsequent <code>profile()</code>
+///
++ (BOOL)registerWithOrganizationId:(NSString * _Nonnull)organizationId url:(NSString * _Nonnull)url geoLocationEnabled:(BOOL)geoLocationEnabled timeout:(double)timeout error:(NSError * _Nullable * _Nullable)error;
+/// Starts async collection/send and returns an existing or newly created session id.
+/// Fire-and-forget: network completion is not signaled to the caller.
+/// Uses the timeout previously stored by <code>register(organizationId:url:geoLocationEnabled:timeout:)</code>.
++ (NSString * _Nonnull)profile SWIFT_WARN_UNUSED_RESULT;
+/// Persists <code>sessionId</code> and starts async collection/send.
+/// Fire-and-forget: network completion is not signaled to the caller.
++ (BOOL)profileWithSessionId:(NSString * _Nonnull)sessionId error:(NSError * _Nullable * _Nullable)error;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #endif // defined(__OBJC__)
 #if __has_attribute(external_source_symbol)
