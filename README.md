@@ -1,7 +1,7 @@
 # ios-sdk
 Koin's iOS SDK for Mobile Fingerprinting
 
-> **Migrating from `KoinFingerprint`?** Update the pod name and version in your Podfile to `pod 'KoinAntifraud', '~> 1.5.0'`. Your existing Swift code keeps working as is.
+> **Migrating from `KoinFingerprint`?** Update the pod name in your Podfile to `pod 'KoinAntifraud'`. Your existing Swift code keeps working as is.
 
 ## Installation
 
