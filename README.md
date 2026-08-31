@@ -22,6 +22,27 @@ Note: If you want to learn more about CocoaPods for dependency management, check
 - Check your target's "*Frameworks, Libraries, and Embedded Content*" section and make sure the library embed option is set to "*Embed & Sign*". If the framework does not appear there, click the `+` button and select it from the list of available frameworks.
 - Check your target's "*Build Phases*" section and make sure the library is listed under "*Link Binary With Libraries*" with its status set to "*Required*". If the framework does not appear there, click the `+` button and select it from the list of available frameworks.
 
+### Swift Package Manager
+
+1. In Xcode, choose **File → Add Package Dependencies…**.
+2. Enter the package Git URL: `https://github.com/koinlatam/ios-sdk`.
+3. Add the `KoinFingerprint` library product to your target.
+4. Import the module:
+
+```swift
+import KoinFingerprint
+```
+
+The Swift module and SPM product are `KoinFingerprint`. The CocoaPods pod name remains `KoinAntifraud`.
+
+**Version pinning:** Prefer **Exact Version** equal to the published Git tag. You may use **Up to Next Major** only from the first tag that includes `Package.swift`. Tags **1.4.0–1.8.0** have neither a package manifesto nor a GitHub Release with `KoinFingerprint-xcframework.zip`; choosing *Up to Next Major* from those tags can fail resolution.
+
+Equivalent CLI / `Package.swift` dependency:
+
+```swift
+.package(url: "https://github.com/koinlatam/ios-sdk.git", exact: "X.Y.Z")
+```
+
 ## Usage
 
 First, import the library in your AppDelegate or main file:
