@@ -13,6 +13,20 @@ KoinAntifraud is available through [CocoaPods](https://cocoapods.org/pods/KoinAn
 Latest versions can be found [here](https://github.com/koinlatam/ios-sdk/releases).
 Note: If you want to learn more about CocoaPods for dependency management, check out their [Using CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html) guide.
 
+### Swift Package Manager
+KoinAntifraud is also available through [Swift Package Manager](https://www.swift.org/package-manager/). In Xcode, go to *File → Add Package Dependencies…* and enter the repository URL:
+```
+https://github.com/koinlatam/ios-sdk.git
+```
+Select the `KoinAntifraud` product when prompted. Or declare it in your own `Package.swift`:
+```swift
+.package(url: "https://github.com/koinlatam/ios-sdk.git", from: "1.8.0")
+```
+and add `.product(name: "KoinAntifraud", package: "ios-sdk")` to your target's dependencies. Then import the module as usual:
+```swift
+import KoinFingerprint
+```
+
 ### Manually
 - Get the latest release from [here](https://github.com/koinlatam/ios-sdk/releases).
 - Open the folder location of downloaded `KoinFingerprint-xcframework.zip` and unzip it.
