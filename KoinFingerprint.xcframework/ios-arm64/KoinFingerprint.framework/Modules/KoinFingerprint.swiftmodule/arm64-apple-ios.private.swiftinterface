@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
-// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name KoinFingerprint
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
+// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name KoinFingerprint
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import AVFoundation
 import AdSupport
 import AppTrackingTransparency
@@ -20,6 +20,7 @@ import Intents
 @_exported import KoinFingerprint
 import LocalAuthentication
 import MachO
+import Metal
 import MetalKit
 import Network
 import NetworkExtension
@@ -189,7 +190,8 @@ public struct LocationConfig {
   public var frequentLocationsCount: Swift.Bool
   public var avgDailyMovementKm: Swift.Bool
   public var isLocationPermissionsAlways: Swift.Bool
-  public init(enabled: Swift.Bool = true, latitude: Swift.Bool = true, longitude: Swift.Bool = true, locationAccuracy: Swift.Bool = true, locationSpoofed: Swift.Bool = true, locationProvider: Swift.Bool = true, isGpsEnabled: Swift.Bool = true, locationVisitsLast7Days: Swift.Bool = true, frequentLocationsCount: Swift.Bool = true, avgDailyMovementKm: Swift.Bool = true, isLocationPermissionsAlways: Swift.Bool = true)
+  public var permission: Swift.Bool
+  public init(enabled: Swift.Bool = true, permission: Swift.Bool = true, latitude: Swift.Bool = true, longitude: Swift.Bool = true, locationAccuracy: Swift.Bool = true, locationSpoofed: Swift.Bool = true, locationProvider: Swift.Bool = true, isGpsEnabled: Swift.Bool = true, locationVisitsLast7Days: Swift.Bool = true, frequentLocationsCount: Swift.Bool = true, avgDailyMovementKm: Swift.Bool = true, isLocationPermissionsAlways: Swift.Bool = true)
 }
 public struct EnvironmentConfig {
   public var enabled: Swift.Bool
@@ -220,7 +222,9 @@ public struct IntegrityConfig {
   public var thirdPartyKeyboardDetected: Swift.Bool
   public var binaryIntegrity: Swift.Bool
   public var targetAppsSchemes: [Swift.String]?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(enabled: Swift.Bool = true, isDebuggerAttached: Swift.Bool = true, suspiciousLibraries: Swift.Bool = true, jailbreakIndicators: Swift.Bool = true, isVpnActive: Swift.Bool = true, isProxyConfigured: Swift.Bool = true, isHooksDetected: Swift.Bool = true, targetApps: Swift.Bool = true, isDoNotDisturbEnabled: Swift.Bool = true, thirdPartyKeyboardDetected: Swift.Bool = true, binaryIntegrity: Swift.Bool = true, targetAppsSchemes: [Swift.String]? = [])
+  #endif
 }
 public struct BehavioralConfig {
   public var enabled: Swift.Bool
@@ -257,10 +261,13 @@ public struct SensorsConfig {
   public var accelerometerData: Swift.Bool
   public var gyroscopeData: Swift.Bool
   public var magnetometerData: Swift.Bool
+  public var accelerometerTemporal: Swift.Bool
+  public var gyroscopeTemporal: Swift.Bool
+  public var magnetometerTemporal: Swift.Bool
   public var isDeviceHeldNaturally: Swift.Bool
   public var physicalActivityType: Swift.Bool
   public var barometricPressure: Swift.Bool
-  public init(enabled: Swift.Bool = true, isAccelerometerAvailable: Swift.Bool = true, isGyroscopeAvailable: Swift.Bool = true, isMagnetometerAvailable: Swift.Bool = true, isProximitySensorAvailable: Swift.Bool = true, isBarometerAvailable: Swift.Bool = true, hasNfc: Swift.Bool = true, accelerometerData: Swift.Bool = true, gyroscopeData: Swift.Bool = true, magnetometerData: Swift.Bool = true, isDeviceHeldNaturally: Swift.Bool = true, physicalActivityType: Swift.Bool = true, barometricPressure: Swift.Bool = true)
+  public init(enabled: Swift.Bool = true, isAccelerometerAvailable: Swift.Bool = true, isGyroscopeAvailable: Swift.Bool = true, isMagnetometerAvailable: Swift.Bool = true, isProximitySensorAvailable: Swift.Bool = true, isBarometerAvailable: Swift.Bool = true, hasNfc: Swift.Bool = true, accelerometerData: Swift.Bool = true, gyroscopeData: Swift.Bool = true, magnetometerData: Swift.Bool = true, accelerometerTemporal: Swift.Bool = true, gyroscopeTemporal: Swift.Bool = true, magnetometerTemporal: Swift.Bool = true, isDeviceHeldNaturally: Swift.Bool = true, physicalActivityType: Swift.Bool = true, barometricPressure: Swift.Bool = true)
 }
 public struct AccountsConfig {
   public var enabled: Swift.Bool
@@ -269,26 +276,29 @@ public struct AccountsConfig {
 }
 public struct ContactsConfig {
   public var enabled: Swift.Bool
+  public var permission: Swift.Bool
   public var contactsCount: Swift.Bool
   public var contactsWithEmail: Swift.Bool
   public var contactsWithPhoto: Swift.Bool
-  public init(enabled: Swift.Bool = true, contactsCount: Swift.Bool = true, contactsWithEmail: Swift.Bool = true, contactsWithPhoto: Swift.Bool = true)
+  public init(enabled: Swift.Bool = true, permission: Swift.Bool = true, contactsCount: Swift.Bool = true, contactsWithEmail: Swift.Bool = true, contactsWithPhoto: Swift.Bool = true)
 }
 public struct CalendarConfig {
   public var enabled: Swift.Bool
+  public var permission: Swift.Bool
   public var eventsCount: Swift.Bool
   public var eventsNext30Days: Swift.Bool
   public var eventsWithLocation: Swift.Bool
   public var eventsRemindersCount: Swift.Bool
-  public init(enabled: Swift.Bool = true, eventsCount: Swift.Bool = true, eventsNext30Days: Swift.Bool = true, eventsWithLocation: Swift.Bool = true, eventsRemindersCount: Swift.Bool = true)
+  public init(enabled: Swift.Bool = true, permission: Swift.Bool = true, eventsCount: Swift.Bool = true, eventsNext30Days: Swift.Bool = true, eventsWithLocation: Swift.Bool = true, eventsRemindersCount: Swift.Bool = true)
 }
 public struct MediaConfig {
   public var enabled: Swift.Bool
+  public var permission: Swift.Bool
   public var photosCount: Swift.Bool
   public var photosLast30Days: Swift.Bool
   public var screenshotsCount: Swift.Bool
   public var videosCount: Swift.Bool
-  public init(enabled: Swift.Bool = true, photosCount: Swift.Bool = true, photosLast30Days: Swift.Bool = true, screenshotsCount: Swift.Bool = true, videosCount: Swift.Bool = true)
+  public init(enabled: Swift.Bool = true, permission: Swift.Bool = true, photosCount: Swift.Bool = true, photosLast30Days: Swift.Bool = true, screenshotsCount: Swift.Bool = true, videosCount: Swift.Bool = true)
 }
 extension KoinFingerprint.CriticalityLevel : Swift.Equatable {}
 extension KoinFingerprint.CriticalityLevel : Swift.Hashable {}

@@ -7,4 +7,5 @@ framework module KoinFingerprint {
 
 module KoinFingerprint.Swift {
   header "KoinFingerprint-Swift.h"
+  requires objc
 }

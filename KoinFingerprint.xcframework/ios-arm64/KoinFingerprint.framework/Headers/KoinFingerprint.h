@@ -15,4 +15,6 @@ FOUNDATION_EXPORT const unsigned char KoinFingerprintVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <KoinFingerprint/PublicHeader.h>
 
+#import <KoinFingerprint/KoinExceptionCatcher.h>
+
 
