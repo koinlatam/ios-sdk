@@ -9,9 +9,11 @@
 ## 1. Why this is not plug-and-play
 
 Apple designed `INFocusStatusCenter` **exclusively for communication apps**
-(messaging, calling). Reading the user's Focus/DND state without the right
-configuration returns `null` — not because the SDK is broken, but because iOS
-silently keeps `focusStatus.isFocused = false` for non-communication hosts.
+(messaging, calling). Without the right configuration the field is not
+reliable — not because the SDK is broken, but because of how iOS gates the API:
+it is `null` while the Focus status is not authorized, and a constant `false`
+when the status is authorized but the Intent Extension is missing (iOS silently
+keeps `focusStatus.isFocused = false` for those hosts).
 
 Apple's stated intent for this API is to *let users communicate to other
 people* whether they're focused — for example, a messaging app showing
@@ -187,7 +189,7 @@ Plan accordingly.
 Possible outcomes during App Review:
 
 - **No issue** — historically Apple has not rejected non-communication apps with this capability
-- **Reviewer flag** — be ready to explain the user-facing benefit in plain terms; avoid words like "fingerprinting", "tracking" or "fraud" in the justification
+- **Reviewer flag** — be ready to explain, accurately and in plain terms, why the app reads the Focus status and what the user gains from it. The justification must match the real use, including fraud prevention when that is the purpose
 - **Rejection** — has been reported for combinations of this capability with overly aggressive features or with weak/contradictory user-facing rationale
 
 The SDK itself doesn't trigger any of these — the decision belongs entirely to

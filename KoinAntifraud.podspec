@@ -1,9 +1,9 @@
 Pod::Spec.new do |spec|
   spec.name         = 'KoinAntifraud'
-  spec.version      = '1.8.0'
-  spec.summary      = 'Koins iOS SDK for Mobile Fingerprinting.'
+  spec.version      = '1.9.0'
+  spec.summary      = 'Koin iOS SDK for Mobile Fingerprinting.'
   spec.description  = <<-DESC 
-  Koin iOS SDK provides a simple API to compute a unique device fingerpint to use it along with Koin Payments or Antifraud services. 
+  Koin iOS SDK provides a simple API to compute a unique device fingerprint to use it along with Koin Payments or Antifraud services. 
                    DESC
   spec.homepage     = 'https://www.koin.com.br'
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
